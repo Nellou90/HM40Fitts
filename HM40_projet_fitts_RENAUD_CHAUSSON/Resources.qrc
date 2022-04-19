@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/TestPage/image">
+        <file>RondBleu.PNG</file>
+    </qresource>
+</RCC>
