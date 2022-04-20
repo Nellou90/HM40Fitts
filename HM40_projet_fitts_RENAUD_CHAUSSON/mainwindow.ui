@@ -126,6 +126,7 @@ border-color: rgb(43, 66, 130);</string>
     <property name="title">
      <string>Aide ?</string>
     </property>
+    <addaction name="actionAide"/>
    </widget>
    <addaction name="menuFichier"/>
    <addaction name="menuParam_tre"/>
@@ -134,6 +135,11 @@ border-color: rgb(43, 66, 130);</string>
   <action name="actionQuitter">
    <property name="text">
     <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionAide">
+   <property name="text">
+    <string>Aide</string>
    </property>
   </action>
  </widget>

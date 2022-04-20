@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
-    connect(ui->menuAide, SIGNAL(clicked()), this, SLOT(aideClicked()));
+    connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
 
 }
 
@@ -30,8 +30,8 @@ void MainWindow::quitterSlot()
 
 
 void MainWindow::aideClicked() {
-    aide f;
-    f.show();
+    aide *f=new aide(this);
+    f->show();
 }
 
 
