@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/TestPage/image">
         <file>RondBleu.PNG</file>
+        <file>fitts.png</file>
     </qresource>
 </RCC>

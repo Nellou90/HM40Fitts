@@ -2,7 +2,7 @@
 #include "ui_aide.h"
 #include "ui_mainwindow.h"
 #include <QPixmap>
-#include "aide.h"
+#include "dialogaide.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
+
 
 }
 
@@ -30,7 +31,7 @@ void MainWindow::quitterSlot()
 
 
 void MainWindow::aideClicked() {
-    aide *f=new aide(this);
+    DialogAide *f=new DialogAide(this);
     f->show();
 }
 

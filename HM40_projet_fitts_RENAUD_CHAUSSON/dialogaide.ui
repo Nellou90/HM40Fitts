@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogAide</class>
+ <widget class="QDialog" name="DialogAide">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 238, 238);</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="bottomMargin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700; text-decoration: underline; color:#4049b1;&quot;&gt;Aide&lt;/span&gt;&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 align=&quot;center&quot; style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700; text-decoration: underline; color:#2b3176;&quot;&gt;Qu'est ce que la Loi de Fitts ? &lt;/span&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Basée sur une équation mathématique, la loi de Fitts est utilisée afin de mettre en évidence le temps nécessaire pour atteindre un objet cible. Quand on se met dans la cadre de l’IHM, un objet cible est n’importe quel élément interactif, comme un lien hypertexte, un bouton d’envoi ou un champ de saisie dans un formulaire sur internet. Dans notre test les cibles seront des ronds &lt;span style=&quot; font-weight:700; color:#ff5e5e;&quot;&gt;ROUGE&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 align=&quot;center&quot; style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700; text-decoration: underline; color:#22275f;&quot;&gt;Formule loi de Fitss&lt;/span&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;T = a + b*log&lt;/span&gt;&lt;span style=&quot; font-weight:700; vertical-align:sub;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;(2*D/W)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>T représente le temps pour accomplir l'action, a et b sont des constantes empiriques, D est la distance de l'objet cible et L est la largeur de l'objet cible.</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 align=&quot;center&quot; style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700; text-decoration: underline; color:#272d6d;&quot;&gt;Déroulement du test&lt;/span&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Une fois sur la page de test il vous faudra appuyer sur le rond &lt;span style=&quot; font-weight:700; color:#598bff;&quot;&gt;BLEU&lt;/span&gt;. Suite à celà, le test se lance avec les paramètres que vous avez saisis dans la page principale et dans la fenetre de dialogue des paramètres. &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Des ronds &lt;span style=&quot; font-weight:700; color:#ff5c5c;&quot;&gt;ROUGE&lt;/span&gt;, sur lesquelles il faut cliquer le plus rapidement, apparaitront succesivement sur votre écran.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Louis George Café&quot;;
+color: rgb(36, 41, 100);
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700; text-decoration: underline;&quot;&gt;Résultat du test&lt;/span&gt;&lt;/h2&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Louis George Café&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;A la fin du test deux graphiques seront affichés. Le premier affiche le calcul de la loi de fitts pour chaque cible du test et  le second le temps d'exécution en fonction de la distance relative.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
