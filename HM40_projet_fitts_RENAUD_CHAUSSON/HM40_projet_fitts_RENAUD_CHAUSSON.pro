@@ -9,20 +9,17 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    aide.cpp \
     dialogaide.cpp \
     dialogpara.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
-    aide.h \
     dialogaide.h \
     dialogpara.h \
     mainwindow.h
 
 FORMS += \
-    aide.ui \
     dialogaide.ui \
     dialogpara.ui \
     mainwindow.ui
