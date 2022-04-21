@@ -1,0 +1,10 @@
+release/aide.o
+release/dialogaide.o
+release/dialogpara.o
+release/main.o
+release/mainwindow.o
+release/qrc_Resources.o
+release/moc_aide.o
+release/moc_dialogaide.o
+release/moc_dialogpara.o
+release/moc_mainwindow.o

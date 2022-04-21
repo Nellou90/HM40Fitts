@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
-
+    connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
 
 }
 
@@ -33,6 +33,11 @@ void MainWindow::quitterSlot()
 
 void MainWindow::aideClicked() {
     DialogAide *f=new DialogAide(this);
+    f->show();
+}
+
+void MainWindow::paraClicked() {
+    dialogPara *f=new dialogPara(this);
     f->show();
 }
 

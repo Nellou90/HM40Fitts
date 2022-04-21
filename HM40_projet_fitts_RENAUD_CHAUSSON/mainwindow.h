@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "aide.h"
+#include "dialogpara.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,10 +23,11 @@ public:
 private:
     Ui::MainWindow *ui;
     Ui::aide *aidePopUp;
-
+    Ui::dialogPara *paraPopUp;
 
 private slots:
     void quitterSlot();
     void aideClicked();
+    void paraClicked();
 };
 #endif // MAINWINDOW_H

@@ -11,17 +11,20 @@ CONFIG += c++17
 SOURCES += \
     aide.cpp \
     dialogaide.cpp \
+    dialogpara.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     aide.h \
     dialogaide.h \
+    dialogpara.h \
     mainwindow.h
 
 FORMS += \
     aide.ui \
     dialogaide.ui \
+    dialogpara.ui \
     mainwindow.ui
 
 # Default rules for deployment.
