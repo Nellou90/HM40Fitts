@@ -29,6 +29,7 @@ class Ui_MainWindow
 public:
     QAction *actionQuitter;
     QAction *actionAide;
+    QAction *actionParam_trage;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -49,12 +50,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(912, 641);
+        MainWindow->resize(918, 651);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(184, 216, 255);"));
         actionQuitter = new QAction(MainWindow);
         actionQuitter->setObjectName(QString::fromUtf8("actionQuitter"));
         actionAide = new QAction(MainWindow);
         actionAide->setObjectName(QString::fromUtf8("actionAide"));
+        actionParam_trage = new QAction(MainWindow);
+        actionParam_trage->setObjectName(QString::fromUtf8("actionParam_trage"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -121,7 +124,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 912, 21));
+        menubar->setGeometry(QRect(0, 0, 918, 22));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tre = new QMenu(menubar);
@@ -134,6 +137,7 @@ public:
         menubar->addAction(menuParam_tre->menuAction());
         menubar->addAction(menuAide->menuAction());
         menuFichier->addAction(actionQuitter);
+        menuParam_tre->addAction(actionParam_trage);
         menuAide->addAction(actionAide);
 
         retranslateUi(MainWindow);
@@ -146,6 +150,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionQuitter->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
         actionAide->setText(QCoreApplication::translate("MainWindow", "Aide", nullptr));
+        actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Nombre de cible restante :", nullptr));
         nbCible->setText(QCoreApplication::translate("MainWindow", "#", nullptr));
         pushButtonInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
