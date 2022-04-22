@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
+    connect(ui->actionParam_trage, SIGNAL(triggered()), this, SLOT(paraClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
     connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
 

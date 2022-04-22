@@ -12,17 +12,20 @@ SOURCES += \
     dialogaide.cpp \
     dialogpara.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    resultats.cpp
 
 HEADERS += \
     dialogaide.h \
     dialogpara.h \
-    mainwindow.h
+    mainwindow.h \
+    resultats.h
 
 FORMS += \
     dialogaide.ui \
     dialogpara.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    resultats.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
