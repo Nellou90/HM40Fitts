@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -36,7 +37,7 @@ public:
     QLabel *nbCible;
     QPushButton *pushButtonInfo;
     QPushButton *pushButtonParam;
-    QWidget *widget;
+    QGraphicsView *testView;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QStatusBar *statusbar;
@@ -89,17 +90,11 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
-        widget->setSizePolicy(sizePolicy1);
-        widget->setMinimumSize(QSize(900, 500));
-        widget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        testView = new QGraphicsView(centralwidget);
+        testView->setObjectName(QString::fromUtf8("testView"));
+        testView->setMinimumSize(QSize(900, 500));
 
-        verticalLayout->addWidget(widget);
+        verticalLayout->addWidget(testView);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
