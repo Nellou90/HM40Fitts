@@ -57,16 +57,24 @@
      </layout>
     </item>
     <item>
-     <widget class="QGraphicsView" name="testView">
-      <property name="minimumSize">
-       <size>
-        <width>900</width>
-        <height>500</height>
-       </size>
+     <widget class="QFrame" name="frameQGraphicsView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
       </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="frameLayout"/>
+       </item>
+      </layout>
      </widget>
     </item>
     <item>
@@ -102,7 +110,7 @@ border-color: rgb(43, 66, 130);</string>
      <x>0</x>
      <y>0</y>
      <width>918</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">

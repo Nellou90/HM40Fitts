@@ -9,6 +9,8 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsItem>
+#include <QMouseEvent>
+#include <QGraphicsEllipseItem>
 #include <QPoint>
 #include <QList>
 #include <QElapsedTimer>
@@ -17,6 +19,24 @@
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+class magv : public QGraphicsView
+{
+    Q_OBJECT
+
+public:
+    magv(QWidget *parent = nullptr):QGraphicsView(parent){};
+    ~magv(){};
+public:
+
+signals:
+    void mousePressEventSignal(QMouseEvent *);
+public slots:
+    void mousePressEvent(QMouseEvent *event){
+        emit(mousePressEventSignal(event));
+    };
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -27,27 +47,23 @@ public:
     ~MainWindow();
 
 
-    QList<QPoint> clickPoints;
-    QList<QPoint> cercleCenter;
-    QList<int> cercleSize;
-    QList<qint64> times;
-
-    QElapsedTimer *timer;
-
-    void nextCible();
-
-
 private:
     Ui::MainWindow *ui;
     Ui::aide *aidePopUp;
     Ui::dialogPara *paraPopUp;
 
+    QGraphicsScene *scene;
+    QGraphicsEllipseItem *cible;
+    magv * graphicsview;
 
 private slots:
     void quitterSlot();
     void aideClicked();
     void paraClicked();
-    void cibleClicked(int x, int y);
+    void creerCible();
+    void cibleCliquee(QMouseEvent *event);
+
+
 
 };
 #endif // MAINWINDOW_H

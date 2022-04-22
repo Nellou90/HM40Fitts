@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -38,7 +38,9 @@ public:
     QLabel *nbCible;
     QPushButton *pushButtonInfo;
     QPushButton *pushButtonParam;
-    QGraphicsView *testView;
+    QFrame *frameQGraphicsView;
+    QHBoxLayout *horizontalLayout_2;
+    QVBoxLayout *frameLayout;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QStatusBar *statusbar;
@@ -93,11 +95,24 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        testView = new QGraphicsView(centralwidget);
-        testView->setObjectName(QString::fromUtf8("testView"));
-        testView->setMinimumSize(QSize(900, 500));
+        frameQGraphicsView = new QFrame(centralwidget);
+        frameQGraphicsView->setObjectName(QString::fromUtf8("frameQGraphicsView"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(frameQGraphicsView->sizePolicy().hasHeightForWidth());
+        frameQGraphicsView->setSizePolicy(sizePolicy1);
+        frameQGraphicsView->setFrameShape(QFrame::StyledPanel);
+        frameQGraphicsView->setFrameShadow(QFrame::Raised);
+        horizontalLayout_2 = new QHBoxLayout(frameQGraphicsView);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        frameLayout = new QVBoxLayout();
+        frameLayout->setObjectName(QString::fromUtf8("frameLayout"));
 
-        verticalLayout->addWidget(testView);
+        horizontalLayout_2->addLayout(frameLayout);
+
+
+        verticalLayout->addWidget(frameQGraphicsView);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -119,7 +134,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 918, 22));
+        menubar->setGeometry(QRect(0, 0, 918, 21));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tre = new QMenu(menubar);

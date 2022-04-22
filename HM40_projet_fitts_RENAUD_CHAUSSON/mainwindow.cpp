@@ -2,7 +2,9 @@
 #include "ui_aide.h"
 #include "ui_mainwindow.h"
 #include <QPixmap>
+#include <QRectF>
 #include "dialogaide.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,12 +12,22 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
+    cible=NULL;
+    graphicsview=new magv(ui->frameQGraphicsView);
+    ui->frameLayout->addWidget(graphicsview);
+    scene = new QGraphicsScene(this);
+    scene->setSceneRect(QRectF(0,0, 640, 480));
+    graphicsview->setScene(scene);
+
+
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
     connect(ui->actionParam_trage, SIGNAL(triggered()), this, SLOT(paraClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
     connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
+    connect(graphicsview, SIGNAL(mousePressEventSignal(QMouseEvent *)), this, SLOT(cibleCliquee(QMouseEvent *)));
 
+    creerCible();
 }
 
 MainWindow::~MainWindow()
@@ -40,6 +52,28 @@ void MainWindow::aideClicked() {
 void MainWindow::paraClicked() {
     dialogPara *f=new dialogPara(this);
     f->show();
+}
+
+void MainWindow::creerCible(){
+    if (cible != NULL){
+        scene->removeItem(cible);
+        delete cible;
+        cible=NULL;
+    }
+    float xcentre=scene->width()/2;
+    float ycentre=scene->height()/2;
+    float largeur=scene->width()/10;
+    float hauteur=scene->height()/10;
+    QRectF qrect=QRectF(xcentre-largeur/2,ycentre-hauteur/2,largeur,hauteur);
+    cible=new QGraphicsEllipseItem(); //qrect,scene);
+    cible->setRect(qrect);
+    cible->setBrush(QColor("red"));
+    scene->addItem(cible);
+    cible->show();
+}
+
+void MainWindow::cibleCliquee(QMouseEvent *event){
+   cible->setBrush(QColor("black"));
 }
 
 

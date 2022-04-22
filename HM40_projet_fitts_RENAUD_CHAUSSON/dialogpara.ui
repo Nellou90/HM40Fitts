@@ -96,7 +96,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+         <widget class="QDoubleSpinBox" name="AdoubleSpinBox"/>
         </item>
         <item>
          <widget class="QLabel" name="label_3">
@@ -106,7 +106,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+         <widget class="QDoubleSpinBox" name="BdoubleSpinBox_2"/>
         </item>
        </layout>
       </widget>
@@ -171,7 +171,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox"/>
+         <widget class="QSpinBox" name="nbCiblespinBox"/>
         </item>
         <item>
          <widget class="QLabel" name="label_7">
@@ -181,7 +181,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_2"/>
+         <widget class="QSpinBox" name="TMinspinBox_2"/>
         </item>
         <item>
          <widget class="QLabel" name="label_8">
@@ -191,7 +191,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_3"/>
+         <widget class="QSpinBox" name="TMaxspinBox_3"/>
         </item>
        </layout>
       </widget>

@@ -3,6 +3,7 @@ debug/dialogpara.o
 debug/main.o
 debug/mainwindow.o
 debug/resultats.o
+debug/testfitts.o
 debug/qrc_Resources.o
 debug/moc_dialogaide.o
 debug/moc_dialogpara.o

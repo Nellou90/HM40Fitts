@@ -3,6 +3,7 @@ release/dialogpara.o
 release/main.o
 release/mainwindow.o
 release/resultats.o
+release/testfitts.o
 release/qrc_Resources.o
 release/moc_dialogaide.o
 release/moc_dialogpara.o

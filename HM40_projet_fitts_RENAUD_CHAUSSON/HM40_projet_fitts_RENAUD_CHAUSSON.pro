@@ -13,13 +13,15 @@ SOURCES += \
     dialogpara.cpp \
     main.cpp \
     mainwindow.cpp \
-    resultats.cpp
+    resultats.cpp \
+    testfitts.cpp
 
 HEADERS += \
     dialogaide.h \
     dialogpara.h \
     mainwindow.h \
-    resultats.h
+    resultats.h \
+    testfitts.h
 
 FORMS += \
     dialogaide.ui \
