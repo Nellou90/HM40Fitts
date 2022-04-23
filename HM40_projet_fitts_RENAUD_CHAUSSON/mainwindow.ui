@@ -36,7 +36,10 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>#</string>
+         <string/>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextEditable</set>
         </property>
        </widget>
       </item>

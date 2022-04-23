@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     dialogaide.cpp \
     dialogpara.cpp \
+    fittsmodel.cpp \
     main.cpp \
     mainwindow.cpp \
     resultats.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     dialogaide.h \
     dialogpara.h \
+    fittsmodel.h \
     mainwindow.h \
     resultats.h \
     testfitts.h

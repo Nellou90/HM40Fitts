@@ -1,5 +1,6 @@
 release/dialogaide.o
 release/dialogpara.o
+release/fittsmodel.o
 release/main.o
 release/mainwindow.o
 release/resultats.o
@@ -9,3 +10,4 @@ release/moc_dialogaide.o
 release/moc_dialogpara.o
 release/moc_mainwindow.o
 release/moc_resultats.o
+release/moc_testfitts.o

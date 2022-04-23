@@ -34,9 +34,9 @@ public:
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout;
     QLabel *label_2;
-    QDoubleSpinBox *AdoubleSpinBox;
+    QDoubleSpinBox *edit_a;
     QLabel *label_3;
-    QDoubleSpinBox *BdoubleSpinBox_2;
+    QDoubleSpinBox *edit_b;
     QSpacerItem *horizontalSpacer_4;
     QLabel *label_4;
     QHBoxLayout *horizontalLayout_2;
@@ -44,11 +44,11 @@ public:
     QGroupBox *groupBox_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_6;
-    QSpinBox *nbCiblespinBox;
+    QSpinBox *nbCibleSpinBox;
     QLabel *label_7;
-    QSpinBox *TMinspinBox_2;
+    QSpinBox *TMin;
     QLabel *label_8;
-    QSpinBox *TMaxspinBox_3;
+    QSpinBox *TMax;
     QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
@@ -105,20 +105,20 @@ public:
 
         verticalLayout->addWidget(label_2);
 
-        AdoubleSpinBox = new QDoubleSpinBox(groupBox);
-        AdoubleSpinBox->setObjectName(QString::fromUtf8("AdoubleSpinBox"));
+        edit_a = new QDoubleSpinBox(groupBox);
+        edit_a->setObjectName(QString::fromUtf8("edit_a"));
 
-        verticalLayout->addWidget(AdoubleSpinBox);
+        verticalLayout->addWidget(edit_a);
 
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
         verticalLayout->addWidget(label_3);
 
-        BdoubleSpinBox_2 = new QDoubleSpinBox(groupBox);
-        BdoubleSpinBox_2->setObjectName(QString::fromUtf8("BdoubleSpinBox_2"));
+        edit_b = new QDoubleSpinBox(groupBox);
+        edit_b->setObjectName(QString::fromUtf8("edit_b"));
 
-        verticalLayout->addWidget(BdoubleSpinBox_2);
+        verticalLayout->addWidget(edit_b);
 
 
         horizontalLayout_3->addWidget(groupBox);
@@ -153,30 +153,30 @@ public:
 
         verticalLayout_2->addWidget(label_6);
 
-        nbCiblespinBox = new QSpinBox(groupBox_2);
-        nbCiblespinBox->setObjectName(QString::fromUtf8("nbCiblespinBox"));
+        nbCibleSpinBox = new QSpinBox(groupBox_2);
+        nbCibleSpinBox->setObjectName(QString::fromUtf8("nbCibleSpinBox"));
 
-        verticalLayout_2->addWidget(nbCiblespinBox);
+        verticalLayout_2->addWidget(nbCibleSpinBox);
 
         label_7 = new QLabel(groupBox_2);
         label_7->setObjectName(QString::fromUtf8("label_7"));
 
         verticalLayout_2->addWidget(label_7);
 
-        TMinspinBox_2 = new QSpinBox(groupBox_2);
-        TMinspinBox_2->setObjectName(QString::fromUtf8("TMinspinBox_2"));
+        TMin = new QSpinBox(groupBox_2);
+        TMin->setObjectName(QString::fromUtf8("TMin"));
 
-        verticalLayout_2->addWidget(TMinspinBox_2);
+        verticalLayout_2->addWidget(TMin);
 
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
 
         verticalLayout_2->addWidget(label_8);
 
-        TMaxspinBox_3 = new QSpinBox(groupBox_2);
-        TMaxspinBox_3->setObjectName(QString::fromUtf8("TMaxspinBox_3"));
+        TMax = new QSpinBox(groupBox_2);
+        TMax->setObjectName(QString::fromUtf8("TMax"));
 
-        verticalLayout_2->addWidget(TMaxspinBox_3);
+        verticalLayout_2->addWidget(TMax);
 
 
         horizontalLayout_2->addWidget(groupBox_2);

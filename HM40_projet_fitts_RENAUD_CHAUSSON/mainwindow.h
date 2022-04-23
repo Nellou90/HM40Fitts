@@ -15,27 +15,29 @@
 #include <QList>
 #include <QElapsedTimer>
 #include <QObject>
+#include "fittsmodel.h"
+#include "testfitts.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class magv : public QGraphicsView
-{
-    Q_OBJECT
+//class magv : public QGraphicsView
+//{
+//    Q_OBJECT
 
-public:
-    magv(QWidget *parent = nullptr):QGraphicsView(parent){};
-    ~magv(){};
-public:
+//public:
+//    magv(QWidget *parent = nullptr):QGraphicsView(parent){};
+//    ~magv(){};
+//public:
 
-signals:
-    void mousePressEventSignal(QMouseEvent *);
-public slots:
-    void mousePressEvent(QMouseEvent *event){
-        emit(mousePressEventSignal(event));
-    };
-};
+//signals:
+//    void mousePressEventSignal(QMouseEvent *);
+//public slots:
+//    void mousePressEvent(QMouseEvent *event){
+//        emit(mousePressEventSignal(event));
+//    };
+//};
 
 
 class MainWindow : public QMainWindow
@@ -43,7 +45,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(fittsModel *model = NULL, QWidget *parent = nullptr);
     ~MainWindow();
 
 
@@ -52,16 +54,23 @@ private:
     Ui::aide *aidePopUp;
     Ui::dialogPara *paraPopUp;
 
-    QGraphicsScene *scene;
-    QGraphicsEllipseItem *cible;
-    magv * graphicsview;
+    testFitts *graphicView;
+    fittsModel *model = NULL;
+
+//    QGraphicsScene *scene;
+//    QGraphicsEllipseItem *cible;
+//    magv * graphicsview;
 
 private slots:
+
     void quitterSlot();
     void aideClicked();
     void paraClicked();
-    void creerCible();
-    void cibleCliquee(QMouseEvent *event);
+    void nbCibleChanged(int);
+
+
+//    void creerCible();
+//    void cibleCliquee(QMouseEvent *event);
 
 
 

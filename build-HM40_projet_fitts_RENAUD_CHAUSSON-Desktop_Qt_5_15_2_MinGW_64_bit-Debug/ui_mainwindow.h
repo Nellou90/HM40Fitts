@@ -79,6 +79,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(nbCible->sizePolicy().hasHeightForWidth());
         nbCible->setSizePolicy(sizePolicy);
+        nbCible->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextEditable);
 
         horizontalLayout->addWidget(nbCible);
 
@@ -162,7 +163,7 @@ public:
         actionAide->setText(QCoreApplication::translate("MainWindow", "Aide", nullptr));
         actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Nombre de cible restante :", nullptr));
-        nbCible->setText(QCoreApplication::translate("MainWindow", "#", nullptr));
+        nbCible->setText(QString());
         pushButtonInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
         pushButtonParam->setText(QCoreApplication::translate("MainWindow", "Param\303\250tre", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Pour commencer le test, veuillez cliquer que le rond </span><span style=\" font-size:10pt; font-weight:700; color:#425bff;\">BLEU</span><span style=\" font-size:10pt;\"> puis vous devrez cliquez sur le rond </span><span style=\" font-size:10pt; font-weight:700; color:#ff6254;\">ROUGE</span><span style=\" font-size:10pt;\"> qui apparaitra al\303\251atoirement jusqu'\303\240 la fin du test </span></p></body></html>", nullptr));
