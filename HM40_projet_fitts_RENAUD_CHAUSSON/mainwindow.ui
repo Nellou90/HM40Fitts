@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>918</width>
-    <height>651</height>
+    <width>1049</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(184, 216, 255);</string>
+   <string notr="true">background-color: rgb(200, 204, 230);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -22,13 +22,19 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Nombre de cible restante :</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="nbCible">
+       <widget class="QLabel" name="nbCibleLabel">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -38,13 +44,16 @@
         <property name="text">
          <string/>
         </property>
-        <property name="textInteractionFlags">
-         <set>Qt::LinksAccessibleByMouse|Qt::TextEditable</set>
-        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonInfo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Info</string>
         </property>
@@ -52,6 +61,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonParam">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Paramètre</string>
         </property>
@@ -81,28 +96,24 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Louis George Café&quot;;
+     <widget class="QLabel" name="label_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Louis George Café&quot;;
 border-color: rgb(43, 66, 130);</string>
-        </property>
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Pour commencer le test, veuillez cliquer que le rond &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; color:#425bff;&quot;&gt;BLEU&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; puis vous devrez cliquez sur le rond &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; color:#ff6254;&quot;&gt;ROUGE&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; qui apparaitra aléatoirement jusqu'à la fin du test &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Pour commencer le test, veuillez cliquer que le rond &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; color:#425bff;&quot;&gt;BLEU&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; puis vous devrez cliquez sur le rond &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; color:#ff6254;&quot;&gt;ROUGE&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; qui apparaitra aléatoirement jusqu'à la fin du test &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -112,7 +123,7 @@ border-color: rgb(43, 66, 130);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>918</width>
+     <width>1049</width>
      <height>21</height>
     </rect>
    </property>

@@ -1,8 +1,8 @@
 debug/dialogaide.o
 debug/dialogpara.o
-debug/fittsmodel.o
 debug/main.o
 debug/mainwindow.o
+debug/parametreModel.o
 debug/resultats.o
 debug/testfitts.o
 debug/qrc_Resources.o

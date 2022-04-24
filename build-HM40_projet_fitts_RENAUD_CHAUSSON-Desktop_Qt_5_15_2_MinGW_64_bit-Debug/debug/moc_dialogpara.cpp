@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_dialogPara_t {
     QByteArrayData data[4];
-    char stringdata0[63];
+    char stringdata0[46];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,13 +33,13 @@ struct qt_meta_stringdata_dialogPara_t {
 static const qt_meta_stringdata_dialogPara_t qt_meta_stringdata_dialogPara = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "dialogPara"
-QT_MOC_LITERAL(1, 11, 23), // "on_validate_btn_clicked"
-QT_MOC_LITERAL(2, 35, 0), // ""
-QT_MOC_LITERAL(3, 36, 26) // "on_restore_default_clicked"
+QT_MOC_LITERAL(1, 11, 26), // "on_restore_default_clicked"
+QT_MOC_LITERAL(2, 38, 0), // ""
+QT_MOC_LITERAL(3, 39, 6) // "accept"
 
     },
-    "dialogPara\0on_validate_btn_clicked\0\0"
-    "on_restore_default_clicked"
+    "dialogPara\0on_restore_default_clicked\0"
+    "\0accept"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,8 +73,8 @@ void dialogPara::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<dialogPara *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_validate_btn_clicked(); break;
-        case 1: _t->on_restore_default_clicked(); break;
+        case 0: _t->on_restore_default_clicked(); break;
+        case 1: _t->accept(); break;
         default: ;
         }
     }

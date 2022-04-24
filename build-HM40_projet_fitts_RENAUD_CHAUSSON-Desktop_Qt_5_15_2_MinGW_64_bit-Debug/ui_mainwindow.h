@@ -35,13 +35,12 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
-    QLabel *nbCible;
+    QLabel *nbCibleLabel;
     QPushButton *pushButtonInfo;
     QPushButton *pushButtonParam;
     QFrame *frameQGraphicsView;
     QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *frameLayout;
-    QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QStatusBar *statusbar;
     QMenuBar *menubar;
@@ -53,8 +52,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(918, 651);
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(184, 216, 255);"));
+        MainWindow->resize(1049, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(200, 204, 230);"));
         actionQuitter = new QAction(MainWindow);
         actionQuitter->setObjectName(QString::fromUtf8("actionQuitter"));
         actionAide = new QAction(MainWindow);
@@ -69,27 +68,38 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
 
         horizontalLayout->addWidget(label);
 
-        nbCible = new QLabel(centralwidget);
-        nbCible->setObjectName(QString::fromUtf8("nbCible"));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(nbCible->sizePolicy().hasHeightForWidth());
-        nbCible->setSizePolicy(sizePolicy);
-        nbCible->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextEditable);
+        nbCibleLabel = new QLabel(centralwidget);
+        nbCibleLabel->setObjectName(QString::fromUtf8("nbCibleLabel"));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(nbCibleLabel->sizePolicy().hasHeightForWidth());
+        nbCibleLabel->setSizePolicy(sizePolicy1);
 
-        horizontalLayout->addWidget(nbCible);
+        horizontalLayout->addWidget(nbCibleLabel);
 
         pushButtonInfo = new QPushButton(centralwidget);
         pushButtonInfo->setObjectName(QString::fromUtf8("pushButtonInfo"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(pushButtonInfo->sizePolicy().hasHeightForWidth());
+        pushButtonInfo->setSizePolicy(sizePolicy2);
 
         horizontalLayout->addWidget(pushButtonInfo);
 
         pushButtonParam = new QPushButton(centralwidget);
         pushButtonParam->setObjectName(QString::fromUtf8("pushButtonParam"));
+        sizePolicy2.setHeightForWidth(pushButtonParam->sizePolicy().hasHeightForWidth());
+        pushButtonParam->setSizePolicy(sizePolicy2);
 
         horizontalLayout->addWidget(pushButtonParam);
 
@@ -98,11 +108,11 @@ public:
 
         frameQGraphicsView = new QFrame(centralwidget);
         frameQGraphicsView->setObjectName(QString::fromUtf8("frameQGraphicsView"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(frameQGraphicsView->sizePolicy().hasHeightForWidth());
-        frameQGraphicsView->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(frameQGraphicsView->sizePolicy().hasHeightForWidth());
+        frameQGraphicsView->setSizePolicy(sizePolicy3);
         frameQGraphicsView->setFrameShape(QFrame::StyledPanel);
         frameQGraphicsView->setFrameShadow(QFrame::Raised);
         horizontalLayout_2 = new QHBoxLayout(frameQGraphicsView);
@@ -115,8 +125,6 @@ public:
 
         verticalLayout->addWidget(frameQGraphicsView);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setMinimumSize(QSize(0, 50));
@@ -124,10 +132,7 @@ public:
 "border-color: rgb(43, 66, 130);"));
         label_2->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_3->addWidget(label_2);
-
-
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout->addWidget(label_2);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -135,7 +140,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 918, 21));
+        menubar->setGeometry(QRect(0, 0, 1049, 21));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tre = new QMenu(menubar);
@@ -163,7 +168,7 @@ public:
         actionAide->setText(QCoreApplication::translate("MainWindow", "Aide", nullptr));
         actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Nombre de cible restante :", nullptr));
-        nbCible->setText(QString());
+        nbCibleLabel->setText(QString());
         pushButtonInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
         pushButtonParam->setText(QCoreApplication::translate("MainWindow", "Param\303\250tre", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Pour commencer le test, veuillez cliquer que le rond </span><span style=\" font-size:10pt; font-weight:700; color:#425bff;\">BLEU</span><span style=\" font-size:10pt;\"> puis vous devrez cliquez sur le rond </span><span style=\" font-size:10pt; font-weight:700; color:#ff6254;\">ROUGE</span><span style=\" font-size:10pt;\"> qui apparaitra al\303\251atoirement jusqu'\303\240 la fin du test </span></p></body></html>", nullptr));

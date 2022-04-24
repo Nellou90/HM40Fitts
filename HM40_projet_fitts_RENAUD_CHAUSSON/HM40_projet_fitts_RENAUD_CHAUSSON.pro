@@ -11,17 +11,18 @@ CONFIG += c++17
 SOURCES += \
     dialogaide.cpp \
     dialogpara.cpp \
-    fittsmodel.cpp \
     main.cpp \
     mainwindow.cpp \
+    parametreModel.cpp \
     resultats.cpp \
     testfitts.cpp
 
 HEADERS += \
+    constant.h \
     dialogaide.h \
     dialogpara.h \
-    fittsmodel.h \
     mainwindow.h \
+    parametreModel.h \
     resultats.h \
     testfitts.h
 

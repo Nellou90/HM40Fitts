@@ -2,7 +2,8 @@
 #define DIALOGPARA_H
 
 #include <QDialog>
-#include "fittsmodel.h"
+#include "parametreModel.h"
+#include "constant.h"
 
 namespace Ui {
 class dialogPara;
@@ -13,18 +14,23 @@ class dialogPara : public QDialog
     Q_OBJECT
 
 public:
-    explicit dialogPara(fittsModel *model = NULL,QWidget *parent = nullptr);
+    explicit dialogPara(parametreModel *model = NULL,QWidget *parent = nullptr);
     ~dialogPara();
+
+signals:
+    //void onSettingsEvent(int, void *);
+
+private slots:
+
+    void on_restore_default_clicked();
+    void accept();
 
 private:
     Ui::dialogPara *ui;
-    fittsModel * fittsModel;
+    parametreModel *temp;
+
 
     void setupData();
-
-private slots:
-    void on_validate_btn_clicked();
-    void on_restore_default_clicked();
 
 };
 

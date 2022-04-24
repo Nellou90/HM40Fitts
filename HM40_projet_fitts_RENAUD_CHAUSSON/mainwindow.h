@@ -15,8 +15,11 @@
 #include <QList>
 #include <QElapsedTimer>
 #include <QObject>
-#include "fittsmodel.h"
+#include "parametreModel.h"
 #include "testfitts.h"
+#include <QSettings>
+
+#include "constant.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -45,17 +48,22 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(fittsModel *model = NULL, QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 
 private:
     Ui::MainWindow *ui;
     Ui::aide *aidePopUp;
+
     Ui::dialogPara *paraPopUp;
 
+    QLabel *information;
+
+    QSettings* m_settings;
+
     testFitts *graphicView;
-    fittsModel *model = NULL;
+    parametreModel *model;
 
 //    QGraphicsScene *scene;
 //    QGraphicsEllipseItem *cible;
@@ -66,7 +74,8 @@ private slots:
     void quitterSlot();
     void aideClicked();
     void paraClicked();
-    void nbCibleChanged(int);
+    void onTargetChange(int);
+//    void onSettingsEvent(int, void *);
 
 
 //    void creerCible();

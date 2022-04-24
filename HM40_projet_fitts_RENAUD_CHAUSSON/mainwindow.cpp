@@ -6,12 +6,14 @@
 #include "dialogaide.h"
 
 
-MainWindow::MainWindow(fittsModel *model,QWidget *parent)
+MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , m_settings(new QSettings("options.ini", QSettings::IniFormat))
 {
 
     ui->setupUi(this);
+    model = new parametreModel;
 //    cible=NULL;
 //    graphicsview=new magv(ui->frameQGraphicsView);
 //    ui->frameLayout->addWidget(graphicsview);
@@ -19,6 +21,9 @@ MainWindow::MainWindow(fittsModel *model,QWidget *parent)
 //    scene->setSceneRect(QRectF(0,0, 640, 480));
 //    graphicsview->setScene(scene);
 
+//    information = new QLabel();
+//    ui->frameLayout->addWidget(information);
+//    information->setFont(QFont("Arial", 15));
 
     // On ajoute nous même le graphique CAR il ne peut pas être ajouter depuis l'éditeur
     graphicView = new testFitts(model);
@@ -28,12 +33,16 @@ MainWindow::MainWindow(fittsModel *model,QWidget *parent)
     ui->frameLayout->addWidget(graphicView);
 
 
+
+
     connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(quitterSlot()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClicked()));
     connect(ui->actionParam_trage, SIGNAL(triggered()), this, SLOT(paraClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
     connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
-    connect(ui->nbCible,SIGNAL(nbCibleChanged(int)),this,SLOT(nbCibleChanged(int)));
+
+
+
 //    connect(graphicsview, SIGNAL(mousePressEventSignal(QMouseEvent *)), this, SLOT(cibleCliquee(QMouseEvent *)));
 
 
@@ -41,7 +50,7 @@ MainWindow::MainWindow(fittsModel *model,QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-
+    delete model;
     delete ui;
 }
 
@@ -58,15 +67,33 @@ void MainWindow::aideClicked() {
     f->show();
 }
 
+
+
+void MainWindow::onTargetChange(int value) {
+    ui->nbCibleLabel->setText(QString::number(value));
+}
+
+
+// Ceci permet de recevoir des events depuis le widget Settings
+//void MainWindow::onSettingsEvent(int val, void *obj) {
+//    qDebug() << "[MainWindow] onSettingsEvent";
+
+//    switch(val) {
+//    case SETTINGS_CLOSE:
+//        model = (fittsModel*) obj;
+//        qDebug() << model->nbCible;
+//        break;
+//    default:
+
+//        break;
+//    }
+//}
+
 void MainWindow::paraClicked() {
-    dialogPara *f=new dialogPara(model,this);
-    f->show();
+    dialogPara *f=new dialogPara(model, this);
+//    connect(f, SIGNAL(onSettingsEvent(int,void*)), this, SLOT(onSettingsEvent(int,void*)));
+    f->open();
 }
-
-void MainWindow::nbCibleChanged(int value) {
-    ui->nbCible->setText(QString::number(value));
-}
-
 
 
 

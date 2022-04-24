@@ -8,18 +8,18 @@
 #include <math.h>
 #include <QLayout>
 #include <QRandomGenerator>
-#include "fittsmodel.h"
+#include "parametreModel.h"
 
 class testFitts : public QGraphicsView
 {
     Q_OBJECT
 
 public:
-     testFitts(fittsModel *parent = NULL);
+     testFitts(parametreModel *parent = NULL);
 
 
 signals:
-    void onFinish(fittsModel*);
+    void onFinish(parametreModel*);
     void onTargetChange(int targetLeft);
 
 protected:
@@ -32,7 +32,7 @@ private:
     void nextCible();
     void finish();
     void calculateResult();
-    fittsModel * fittsmodel;
+    parametreModel * fittsmodel;
     QElapsedTimer *timer;
 
 };

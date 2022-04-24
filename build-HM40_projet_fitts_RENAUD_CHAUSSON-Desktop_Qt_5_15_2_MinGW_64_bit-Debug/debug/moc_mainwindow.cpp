@@ -37,11 +37,11 @@ QT_MOC_LITERAL(1, 11, 11), // "quitterSlot"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 11), // "aideClicked"
 QT_MOC_LITERAL(4, 36, 11), // "paraClicked"
-QT_MOC_LITERAL(5, 48, 14) // "nbCibleChanged"
+QT_MOC_LITERAL(5, 48, 14) // "onTargetChange"
 
     },
     "MainWindow\0quitterSlot\0\0aideClicked\0"
-    "paraClicked\0nbCibleChanged"
+    "paraClicked\0onTargetChange"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,7 +82,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->quitterSlot(); break;
         case 1: _t->aideClicked(); break;
         case 2: _t->paraClicked(); break;
-        case 3: _t->nbCibleChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->onTargetChange((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }

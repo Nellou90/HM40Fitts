@@ -216,8 +216,8 @@ public:
 
 
         retranslateUi(dialogPara);
-        QObject::connect(buttonBox, SIGNAL(accepted()), dialogPara, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), dialogPara, SLOT(reject()));
+        QObject::connect(buttonBox, SIGNAL(accepted()), dialogPara, SLOT(accept()));
 
         QMetaObject::connectSlotsByName(dialogPara);
     } // setupUi

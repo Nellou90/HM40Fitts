@@ -55,6 +55,7 @@
 #define __cpp_capture_star_this 201603
 #define __SHRT_MAX__ 0x7fff
 #define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
+#define __FLT64X_MAX_10_EXP__ 4932
 #define __cpp_if_constexpr 201606
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -92,7 +93,6 @@
 #define __SHRT_WIDTH__ 16
 #define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
 #define __DEC32_MAX__ 9.999999E96DF
-#define __FLT64X_MAX_10_EXP__ 4932
 #define __cpp_threadsafe_static_init 200806
 #define __FLT64X_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951F64x
 #define __MINGW32__ 1

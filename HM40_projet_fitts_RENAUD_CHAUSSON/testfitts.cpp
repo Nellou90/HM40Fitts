@@ -7,12 +7,10 @@ elles ont été reprise à partir du programme initial à
 modifier
 */
 
-testFitts::testFitts(fittsModel *model)
+testFitts::testFitts(parametreModel *model)
 {
-    if(model == NULL)
-        fittsmodel = new fittsModel();
-    else
-        fittsmodel = model;
+
+    fittsmodel = model;
 
     qDebug() << fittsmodel->nbCible;
 
