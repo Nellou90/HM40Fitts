@@ -3,6 +3,14 @@
 
 #include <QMainWindow>
 
+#include <QWidget>
+#include <QChart>
+#include <QChartView>
+#include <QVBoxLayout>
+#include <QGroupBox>
+#include "parametreModel.h"
+
+
 namespace Ui {
 class resultats;
 }
@@ -12,7 +20,8 @@ class resultats : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit resultats(QWidget *parent = nullptr);
+    explicit resultats(parametreModel *model,QWidget *parent = nullptr);
+
     ~resultats();
 
 private:
