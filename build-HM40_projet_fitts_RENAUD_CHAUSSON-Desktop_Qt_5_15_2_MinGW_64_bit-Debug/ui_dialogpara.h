@@ -224,7 +224,7 @@ public:
 
     void retranslateUi(QDialog *dialogPara)
     {
-        dialogPara->setWindowTitle(QCoreApplication::translate("dialogPara", "Param\303\251trages", nullptr));
+        dialogPara->setWindowTitle(QCoreApplication::translate("dialogPara", "Param\303\251trage", nullptr));
         label->setText(QCoreApplication::translate("dialogPara", "<html><head/><body><h1 align=\"center\" style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700; text-decoration: underline; color:#3a43a1;\">Param\303\250tres</span></h1></body></html>", nullptr));
         label_5->setText(QCoreApplication::translate("dialogPara", "<html><head/><body><p align=\"center\"><span style=\" font-weight:700; text-decoration: underline; color:#292f72;\"><h2>Param\303\250trage de Fitts</h2></span></p></body></html>", nullptr));
         groupBox->setTitle(QString());

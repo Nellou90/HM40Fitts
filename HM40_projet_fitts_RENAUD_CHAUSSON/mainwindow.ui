@@ -75,7 +75,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Paramètre</string>
+         <string>Paramètres</string>
         </property>
        </widget>
       </item>
@@ -142,7 +142,7 @@ border-color: rgb(43, 66, 130);</string>
    </widget>
    <widget class="QMenu" name="menuParam_tre">
     <property name="title">
-     <string>Paramètre</string>
+     <string>Paramètres</string>
     </property>
     <addaction name="actionParam_trage"/>
    </widget>
@@ -160,15 +160,24 @@ border-color: rgb(43, 66, 130);</string>
    <property name="text">
     <string>Quitter</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
   </action>
   <action name="actionAide">
    <property name="text">
     <string>Aide</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+,</string>
+   </property>
   </action>
   <action name="actionParam_trage">
    <property name="text">
-    <string>Paramètrages</string>
+    <string>Paramètrage</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
   </action>
  </widget>

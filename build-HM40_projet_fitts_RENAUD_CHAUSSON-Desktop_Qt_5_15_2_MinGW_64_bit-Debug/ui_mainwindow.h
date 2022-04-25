@@ -171,16 +171,25 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Fitts", nullptr));
         actionQuitter->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+#if QT_CONFIG(shortcut)
+        actionQuitter->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Q", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionAide->setText(QCoreApplication::translate("MainWindow", "Aide", nullptr));
-        actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));
+#if QT_CONFIG(shortcut)
+        actionAide->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+,", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trage", nullptr));
+#if QT_CONFIG(shortcut)
+        actionParam_trage->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+P", nullptr));
+#endif // QT_CONFIG(shortcut)
         label->setText(QCoreApplication::translate("MainWindow", "Nombre de cible restante :", nullptr));
         nbCibleLabel->setText(QString());
         pushButton->setText(QCoreApplication::translate("MainWindow", "Recommencer", nullptr));
         pushButtonInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
-        pushButtonParam->setText(QCoreApplication::translate("MainWindow", "Param\303\250tre", nullptr));
+        pushButtonParam->setText(QCoreApplication::translate("MainWindow", "Param\303\250tres", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Pour commencer le test, veuillez cliquer que le rond </span><span style=\" font-size:10pt; font-weight:700; color:#425bff;\">BLEU</span><span style=\" font-size:10pt;\"> puis vous devrez cliquez sur le rond </span><span style=\" font-size:10pt; font-weight:700; color:#ff6254;\">ROUGE</span><span style=\" font-size:10pt;\"> qui apparaitra al\303\251atoirement jusqu'\303\240 la fin du test </span></p></body></html>", nullptr));
         menuFichier->setTitle(QCoreApplication::translate("MainWindow", "Fichier", nullptr));
-        menuParam_tre->setTitle(QCoreApplication::translate("MainWindow", "Param\303\250tre", nullptr));
+        menuParam_tre->setTitle(QCoreApplication::translate("MainWindow", "Param\303\250tres", nullptr));
         menuAide->setTitle(QCoreApplication::translate("MainWindow", "Aide ?", nullptr));
     } // retranslateUi
 

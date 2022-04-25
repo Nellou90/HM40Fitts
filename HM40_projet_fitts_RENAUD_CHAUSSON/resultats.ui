@@ -100,7 +100,7 @@
    </widget>
    <widget class="QMenu" name="menuParam_tre">
     <property name="title">
-     <string>Paramètre</string>
+     <string>Paramètres</string>
     </property>
     <addaction name="actionParam_trages"/>
    </widget>
@@ -119,15 +119,24 @@
    <property name="text">
     <string>Aide</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+,</string>
+   </property>
   </action>
   <action name="actionParam_trages">
    <property name="text">
-    <string>Paramétrages</string>
+    <string>Paramétrage</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
   </action>
   <action name="actionQuitter">
    <property name="text">
     <string>Quitter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
  </widget>

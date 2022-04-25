@@ -149,8 +149,17 @@ public:
     {
         resultats->setWindowTitle(QCoreApplication::translate("resultats", "R\303\251sultats", nullptr));
         actionAide->setText(QCoreApplication::translate("resultats", "Aide", nullptr));
-        actionParam_trages->setText(QCoreApplication::translate("resultats", "Param\303\251trages", nullptr));
+#if QT_CONFIG(shortcut)
+        actionAide->setShortcut(QCoreApplication::translate("resultats", "Ctrl+Shift+,", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionParam_trages->setText(QCoreApplication::translate("resultats", "Param\303\251trage", nullptr));
+#if QT_CONFIG(shortcut)
+        actionParam_trages->setShortcut(QCoreApplication::translate("resultats", "Ctrl+P", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionQuitter->setText(QCoreApplication::translate("resultats", "Quitter", nullptr));
+#if QT_CONFIG(shortcut)
+        actionQuitter->setShortcut(QCoreApplication::translate("resultats", "Ctrl+Q", nullptr));
+#endif // QT_CONFIG(shortcut)
         label->setText(QCoreApplication::translate("resultats", "<html><head/><body><h1 align=\"center\" style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700; text-decoration: underline; color:#1a2465;\">R\303\251sultats</span></h1></body></html>", nullptr));
 #if QT_CONFIG(whatsthis)
         recommencer->setWhatsThis(QCoreApplication::translate("resultats", "<html><head/><body><p><span style=\" font-weight:700; color:#ff6254;\">Fonction non impl\303\251ment\303\251 </span></p></body></html>", nullptr));
@@ -158,7 +167,7 @@ public:
         recommencer->setText(QCoreApplication::translate("resultats", "Recommencer", nullptr));
         QuitterResult->setText(QCoreApplication::translate("resultats", "Quitter", nullptr));
         menuFichier->setTitle(QCoreApplication::translate("resultats", "Fichier", nullptr));
-        menuParam_tre->setTitle(QCoreApplication::translate("resultats", "Param\303\250tre", nullptr));
+        menuParam_tre->setTitle(QCoreApplication::translate("resultats", "Param\303\250tres", nullptr));
         menuAide->setTitle(QCoreApplication::translate("resultats", "Aide ?", nullptr));
     } // retranslateUi
 
