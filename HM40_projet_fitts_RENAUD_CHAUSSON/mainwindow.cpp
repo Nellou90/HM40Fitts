@@ -101,13 +101,12 @@ void MainWindow::openResults() {
     qDebug() << "Opening results";
     resultats *f = new resultats(model, this);
     f->show();
-    this->close();
+
 }
 
 void MainWindow::openHome(){
     qDebug() << "Opening home";
-    home = new MainWindow(this);
-    home->show();
+
 }
 
 // Ceci permet de recevoir des events depuis le widget Results

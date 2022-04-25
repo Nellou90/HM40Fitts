@@ -58,7 +58,6 @@ public:
 private:
     Ui::MainWindow *ui;
     QLabel *information;
-    MainWindow *home;
 
     QSettings* m_settings;
 
