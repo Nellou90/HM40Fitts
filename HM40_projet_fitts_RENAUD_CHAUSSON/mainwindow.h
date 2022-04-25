@@ -28,23 +28,6 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-//class magv : public QGraphicsView
-//{
-//    Q_OBJECT
-
-//public:
-//    magv(QWidget *parent = nullptr):QGraphicsView(parent){};
-//    ~magv(){};
-//public:
-
-//signals:
-//    void mousePressEventSignal(QMouseEvent *);
-//public slots:
-//    void mousePressEvent(QMouseEvent *event){
-//        emit(mousePressEventSignal(event));
-//    };
-//};
-
 
 class MainWindow : public QMainWindow
 {
@@ -64,12 +47,6 @@ private:
     testFitts *graphicView;
     parametreModel *model;
 
-    void openHome();
-
-//    QGraphicsScene *scene;
-//    QGraphicsEllipseItem *cible;
-//    magv * graphicsview;
-
 
 
 private slots:
@@ -79,13 +56,7 @@ private slots:
     void paraClicked();
     void onTargetChange(int);
     void openResults();
-    void onResultsEvent(int);
 
-//    void onSettingsEvent(int, void *);
-
-
-//    void creerCible();
-//    void cibleCliquee(QMouseEvent *event);
 
 
 

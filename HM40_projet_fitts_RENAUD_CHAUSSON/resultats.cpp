@@ -19,6 +19,7 @@ resultats::resultats(parametreModel *model,QWidget *parent) :
     ui->LayoutGraphe->addWidget(tab);
 
     connect(ui->recommencer, SIGNAL(clicked()), this, SLOT(on_recommencer_clicked()));
+    connect(ui->QuitterResult, SIGNAL(clicked()), this, SLOT(on_QuitterResult_clicked()));
 }
 
 resultats::~resultats()
@@ -205,12 +206,14 @@ QWidget *resultats::generateResultLayout(parametreModel *model, QChartView* char
 
 void resultats::on_recommencer_clicked()
 {
-     emit onResultsEvent(RESULTS_RESTART);
+    QMessageBox *f =new QMessageBox;
+    f->setText("Fonction non implémentée !");
+
 }
 
 
 void resultats::on_QuitterResult_clicked()
 {
-    emit onResultsEvent(RESULTS_EXIT_PRGM);
+   this->close();
 }
 

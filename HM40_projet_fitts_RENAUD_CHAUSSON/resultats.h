@@ -27,6 +27,7 @@
 #include <QVBoxLayout>
 #include <QGroupBox>
 #include <QLabel>
+#include <QMessageBox>
 
 #include "constant.h"
 

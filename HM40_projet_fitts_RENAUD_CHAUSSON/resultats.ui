@@ -41,6 +41,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="recommencer">
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ff6254;&quot;&gt;Fonction non implémenté &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
         <property name="text">
          <string>Recommencer</string>
         </property>

@@ -253,7 +253,7 @@ release/moc_dialogaide.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogaide.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		release/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h -o release\moc_dialogaide.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h -o release\moc_dialogaide.cpp
 
 release/moc_dialogpara.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QDialog \
@@ -366,7 +366,7 @@ release/moc_dialogpara.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.h \
 		../HM40_projet_fitts_RENAUD_CHAUSSON/constant.h \
 		release/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h -o release\moc_dialogpara.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h -o release\moc_dialogpara.cpp
 
 release/moc_mainwindow.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
@@ -522,9 +522,61 @@ release/moc_mainwindow.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qrandom.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QSettings \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QProcess \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qprocess.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChart \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchart.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartglobal.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QPen \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QFont \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLegend \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlegend.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicswidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicslayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QBrush \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QMargins \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartView \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QString \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QTranslator \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qtranslator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QInputDialog \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qinputdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLineSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlineseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QXYSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qxyseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QStringList \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSet \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarset.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QCategoryAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qcategoryaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QValueAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
 		release/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_resultats.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
@@ -713,9 +765,12 @@ release/moc_resultats.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/constant.h \
 		release/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h -o release\moc_resultats.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h -o release\moc_resultats.cpp
 
 release/moc_testfitts.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
@@ -845,7 +900,7 @@ release/moc_testfitts.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QList \
 		release/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h -o release\moc_testfitts.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/ProjetFitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h -o release\moc_testfitts.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1300,7 +1355,59 @@ release/main.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/main.cpp ../HM40_projet_fit
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QRandomGenerator \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qrandom.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QSettings \
-		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QProcess \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qprocess.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChart \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchart.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartglobal.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QPen \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QFont \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLegend \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlegend.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicswidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicslayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QBrush \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QMargins \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartView \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QString \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QTranslator \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qtranslator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QInputDialog \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qinputdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLineSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlineseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QXYSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qxyseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QStringList \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSet \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarset.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QCategoryAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qcategoryaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QValueAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\HM40_projet_fitts_RENAUD_CHAUSSON\main.cpp
 
 release/mainwindow.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.cpp ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.h \
@@ -1457,14 +1564,62 @@ release/mainwindow.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.cpp ../HM4
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qrandom.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QSettings \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
-		ui_aide.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QProcess \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qprocess.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChart \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchart.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartglobal.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QPen \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QFont \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLegend \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlegend.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicswidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicslayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QBrush \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QMargins \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartView \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QString \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QTranslator \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qtranslator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QInputDialog \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qinputdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLineSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlineseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QXYSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qxyseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QStringList \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSet \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarset.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QCategoryAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qcategoryaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QValueAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		ui_aide.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
 		ui_mainwindow.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QAction \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h \
@@ -1717,11 +1872,14 @@ release/resultats.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.cpp ../HM40_
 		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/constant.h \
 		ui_resultats.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QAction \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h \
-		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QFrame \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMenu \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h \
