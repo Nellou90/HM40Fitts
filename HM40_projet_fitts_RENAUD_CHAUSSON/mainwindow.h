@@ -57,6 +57,7 @@ private slots:
     void paraClicked();
     void onTargetChange(int);
     void openResults();
+    void on_recommencer_clickedMain();
 
 
 

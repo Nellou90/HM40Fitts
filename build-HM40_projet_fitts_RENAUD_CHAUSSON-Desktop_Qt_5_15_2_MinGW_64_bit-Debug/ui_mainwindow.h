@@ -36,6 +36,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLabel *nbCibleLabel;
+    QPushButton *pushButton;
     QPushButton *pushButtonInfo;
     QPushButton *pushButtonParam;
     QFrame *frameQGraphicsView;
@@ -85,6 +86,11 @@ public:
         nbCibleLabel->setSizePolicy(sizePolicy1);
 
         horizontalLayout->addWidget(nbCibleLabel);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
 
         pushButtonInfo = new QPushButton(centralwidget);
         pushButtonInfo->setObjectName(QString::fromUtf8("pushButtonInfo"));
@@ -169,6 +175,7 @@ public:
         actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Nombre de cible restante :", nullptr));
         nbCibleLabel->setText(QString());
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Recommencer", nullptr));
         pushButtonInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
         pushButtonParam->setText(QCoreApplication::translate("MainWindow", "Param\303\250tre", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Pour commencer le test, veuillez cliquer que le rond </span><span style=\" font-size:10pt; font-weight:700; color:#425bff;\">BLEU</span><span style=\" font-size:10pt;\"> puis vous devrez cliquez sur le rond </span><span style=\" font-size:10pt; font-weight:700; color:#ff6254;\">ROUGE</span><span style=\" font-size:10pt;\"> qui apparaitra al\303\251atoirement jusqu'\303\240 la fin du test </span></p></body></html>", nullptr));

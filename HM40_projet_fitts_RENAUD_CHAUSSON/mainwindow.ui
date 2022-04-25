@@ -47,6 +47,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Recommencer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButtonInfo">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">

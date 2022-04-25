@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionParam_trage, SIGNAL(triggered()), this, SLOT(paraClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
     connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(on_recommencer_clickedMain()));
 
 
 
@@ -129,4 +130,12 @@ void MainWindow::openResults() {
 //}
 
 
+void MainWindow::on_recommencer_clickedMain()
+{
+    this->close();
+    //QMessageBox *f =new QMessageBox;
+    //f->setText("Fonction non implémentée !");
+    MainWindow *f=new MainWindow(this);
+    f->show();
+}
 
