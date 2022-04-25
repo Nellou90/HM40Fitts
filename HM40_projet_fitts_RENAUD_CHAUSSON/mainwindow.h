@@ -18,8 +18,11 @@
 #include "parametreModel.h"
 #include "testfitts.h"
 #include <QSettings>
+#include <QProcess>
 
 #include "constant.h"
+
+#include "resultats.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -54,20 +57,21 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    Ui::aide *aidePopUp;
-
-    Ui::dialogPara *paraPopUp;
-
     QLabel *information;
+    MainWindow *home;
 
     QSettings* m_settings;
 
     testFitts *graphicView;
     parametreModel *model;
 
+    void openHome();
+
 //    QGraphicsScene *scene;
 //    QGraphicsEllipseItem *cible;
 //    magv * graphicsview;
+
+
 
 private slots:
 
@@ -75,6 +79,9 @@ private slots:
     void aideClicked();
     void paraClicked();
     void onTargetChange(int);
+    void openResults();
+    void onResultsEvent(int);
+
 //    void onSettingsEvent(int, void *);
 
 

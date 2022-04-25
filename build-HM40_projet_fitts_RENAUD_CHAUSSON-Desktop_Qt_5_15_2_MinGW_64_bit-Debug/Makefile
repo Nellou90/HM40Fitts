@@ -250,6 +250,7 @@ Makefile: ../HM40_projet_fitts_RENAUD_CHAUSSON/HM40_projet_fitts_RENAUD_CHAUSSON
 		C:/qt/5.15.2/mingw81_64/mkspecs/features/yacc.prf \
 		C:/qt/5.15.2/mingw81_64/mkspecs/features/lex.prf \
 		../HM40_projet_fitts_RENAUD_CHAUSSON/HM40_projet_fitts_RENAUD_CHAUSSON.pro \
+		C:/qt/5.15.2/mingw81_64/lib/Qt5Charts.prl \
 		C:/qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl \
 		C:/qt/5.15.2/mingw81_64/lib/Qt5Gui.prl \
 		C:/qt/5.15.2/mingw81_64/lib/Qt5Core.prl \
@@ -437,6 +438,7 @@ C:/qt/5.15.2/mingw81_64/mkspecs/features/exceptions.prf:
 C:/qt/5.15.2/mingw81_64/mkspecs/features/yacc.prf:
 C:/qt/5.15.2/mingw81_64/mkspecs/features/lex.prf:
 ../HM40_projet_fitts_RENAUD_CHAUSSON/HM40_projet_fitts_RENAUD_CHAUSSON.pro:
+C:/qt/5.15.2/mingw81_64/lib/Qt5Charts.prl:
 C:/qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 C:/qt/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 C:/qt/5.15.2/mingw81_64/lib/Qt5Core.prl:

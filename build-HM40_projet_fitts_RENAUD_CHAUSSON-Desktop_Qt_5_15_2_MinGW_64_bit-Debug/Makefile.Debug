@@ -13,13 +13,13 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
+DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_QML_DEBUG -DQT_CHARTS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++1z -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\HM40_projet_fitts_RENAUD_CHAUSSON -I. -IC:\qt\5.15.2\mingw81_64\include -IC:\qt\5.15.2\mingw81_64\include\QtWidgets -IC:\qt\5.15.2\mingw81_64\include\QtGui -IC:\qt\5.15.2\mingw81_64\include\QtANGLE -IC:\qt\5.15.2\mingw81_64\include\QtCore -Idebug -I. -I/include -IC:\qt\5.15.2\mingw81_64\mkspecs\win32-g++ 
+INCPATH       = -I..\HM40_projet_fitts_RENAUD_CHAUSSON -I. -IC:\qt\5.15.2\mingw81_64\include -IC:\qt\5.15.2\mingw81_64\include\QtCharts -IC:\qt\5.15.2\mingw81_64\include\QtWidgets -IC:\qt\5.15.2\mingw81_64\include\QtGui -IC:\qt\5.15.2\mingw81_64\include\QtANGLE -IC:\qt\5.15.2\mingw81_64\include\QtCore -Idebug -I. -I/include -IC:\qt\5.15.2\mingw81_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        C:\qt\5.15.2\mingw81_64\lib\libQt5Widgets.a C:\qt\5.15.2\mingw81_64\lib\libQt5Gui.a C:\qt\5.15.2\mingw81_64\lib\libQt5Core.a  -lmingw32 C:\qt\5.15.2\mingw81_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        C:\qt\5.15.2\mingw81_64\lib\libQt5Charts.a C:\qt\5.15.2\mingw81_64\lib\libQt5Widgets.a C:\qt\5.15.2\mingw81_64\lib\libQt5Gui.a C:\qt\5.15.2\mingw81_64\lib\libQt5Core.a  -lmingw32 C:\qt\5.15.2\mingw81_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = C:\qt\5.15.2\mingw81_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -99,7 +99,7 @@ DESTDIR_TARGET = debug\HM40_projet_fitts_RENAUD_CHAUSSON.exe
 first: all
 all: Makefile.Debug  debug/HM40_projet_fitts_RENAUD_CHAUSSON.exe
 
-debug/HM40_projet_fitts_RENAUD_CHAUSSON.exe: C:/qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C:/qt/5.15.2/mingw81_64/lib/libQt5Gui.a C:/qt/5.15.2/mingw81_64/lib/libQt5Core.a C:/qt/5.15.2/mingw81_64/lib/libqtmain.a ui_dialogaide.h ui_dialogpara.h ui_mainwindow.h ui_resultats.h $(OBJECTS) 
+debug/HM40_projet_fitts_RENAUD_CHAUSSON.exe: C:/qt/5.15.2/mingw81_64/lib/libQt5Charts.a C:/qt/5.15.2/mingw81_64/lib/libQt5Widgets.a C:/qt/5.15.2/mingw81_64/lib/libQt5Gui.a C:/qt/5.15.2/mingw81_64/lib/libQt5Core.a C:/qt/5.15.2/mingw81_64/lib/libqtmain.a ui_dialogaide.h ui_dialogpara.h ui_mainwindow.h ui_resultats.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) @object_script.HM40_projet_fitts_RENAUD_CHAUSSON.Debug  $(LIBS)
 
 qmake: FORCE
@@ -108,7 +108,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) HM40_projet_fitts_RENAUD_CHAUSSON.zip $(SOURCES) $(DIST) ..\HM40_projet_fitts_RENAUD_CHAUSSON\HM40_projet_fitts_RENAUD_CHAUSSON.pro C:\qt\5.15.2\mingw81_64\mkspecs\features\spec_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\qdevice.pri C:\qt\5.15.2\mingw81_64\mkspecs\features\device_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\common\sanitize.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\gcc-base.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\g++-base.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\angle.conf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\qt\5.15.2\mingw81_64\mkspecs\common\windows-vulkan.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\g++-win32.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\windows-desktop.conf C:\qt\5.15.2\mingw81_64\mkspecs\qconfig.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3danimation.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dcore.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dinput.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dlogic.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3drender.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3drender_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axbase.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axbase_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axcontainer.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axserver.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axserver_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bluetooth.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_charts.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_charts_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_concurrent.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_core.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_core_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_dbus.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_dbus_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designer.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designer_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_edid_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gamepad.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gui.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gui_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_help.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_help_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_location.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_location_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimedia.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_network.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_network_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_nfc.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_nfc_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_opengl.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_opengl_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_openglextensions.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioning.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioning_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioningquick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_printsupport.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmltest.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_remoteobjects.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_repparser.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_repparser_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_scxml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_scxml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sensors.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sensors_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialbus.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialport.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialport_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sql.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sql_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_svg.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_svg_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_testlib.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_testlib_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_texttospeech.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uiplugin.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uitools.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uitools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_vulkan_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_webchannel.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_websockets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_websockets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_widgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_widgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_winextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_winextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_zlib_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\features\qt_functions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qt_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\win32-g++\qmake.conf C:\qt\5.15.2\mingw81_64\mkspecs\features\spec_post.prf .qmake.stash C:\qt\5.15.2\mingw81_64\mkspecs\features\exclusive_builds.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\toolchain.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\default_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\default_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resolve_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\exclusive_builds_post.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\default_post.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\build_pass.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qml_debug.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\precompile_header.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\warn_on.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qt.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resources_functions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resources.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\moc.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\opengl.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\uic.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qmake_use.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\file_copies.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\windows.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\testcase_targets.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\exceptions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\yacc.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\lex.prf ..\HM40_projet_fitts_RENAUD_CHAUSSON\HM40_projet_fitts_RENAUD_CHAUSSON.pro ..\HM40_projet_fitts_RENAUD_CHAUSSON\Resources.qrc C:\qt\5.15.2\mingw81_64\lib\Qt5Widgets.prl C:\qt\5.15.2\mingw81_64\lib\Qt5Gui.prl C:\qt\5.15.2\mingw81_64\lib\Qt5Core.prl C:\qt\5.15.2\mingw81_64\lib\qtmain.prl   ..\HM40_projet_fitts_RENAUD_CHAUSSON\Resources.qrc C:\qt\5.15.2\mingw81_64\mkspecs\features\data\dummy.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\constant.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\parametreModel.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h  ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\main.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\parametreModel.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.ui    
+	$(ZIP) HM40_projet_fitts_RENAUD_CHAUSSON.zip $(SOURCES) $(DIST) ..\HM40_projet_fitts_RENAUD_CHAUSSON\HM40_projet_fitts_RENAUD_CHAUSSON.pro C:\qt\5.15.2\mingw81_64\mkspecs\features\spec_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\qdevice.pri C:\qt\5.15.2\mingw81_64\mkspecs\features\device_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\common\sanitize.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\gcc-base.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\g++-base.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\angle.conf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\qt\5.15.2\mingw81_64\mkspecs\common\windows-vulkan.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\g++-win32.conf C:\qt\5.15.2\mingw81_64\mkspecs\common\windows-desktop.conf C:\qt\5.15.2\mingw81_64\mkspecs\qconfig.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3danimation.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dcore.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dinput.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dlogic.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3drender.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_3drender_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axbase.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axbase_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axcontainer.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axserver.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_axserver_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bluetooth.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_bootstrap_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_charts.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_charts_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_concurrent.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_core.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_core_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_dbus.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_dbus_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designer.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designer_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_edid_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_egl_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gamepad.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gamepad_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gui.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_gui_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_help.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_help_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_location.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_location_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimedia.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_network.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_network_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_nfc.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_nfc_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_opengl.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_opengl_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_openglextensions.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_openglextensions_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioning.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioning_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioningquick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_printsupport.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmltest.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quick.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quick_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_remoteobjects.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_repparser.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_repparser_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_scxml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_scxml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sensors.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sensors_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialbus.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialport.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_serialport_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sql.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_sql_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_svg.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_svg_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_testlib.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_testlib_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_texttospeech.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_theme_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uiplugin.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uitools.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_uitools_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_vulkan_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_webchannel.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_websockets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_websockets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_widgets.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_widgets_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_winextras.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_winextras_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xml.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xml_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xmlpatterns.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\modules\qt_lib_zlib_private.pri C:\qt\5.15.2\mingw81_64\mkspecs\features\qt_functions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qt_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\win32-g++\qmake.conf C:\qt\5.15.2\mingw81_64\mkspecs\features\spec_post.prf .qmake.stash C:\qt\5.15.2\mingw81_64\mkspecs\features\exclusive_builds.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\toolchain.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\default_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\default_pre.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resolve_config.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\exclusive_builds_post.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\default_post.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\build_pass.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qml_debug.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\precompile_header.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\warn_on.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qt.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resources_functions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\resources.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\moc.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\opengl.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\uic.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\qmake_use.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\file_copies.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\win32\windows.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\testcase_targets.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\exceptions.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\yacc.prf C:\qt\5.15.2\mingw81_64\mkspecs\features\lex.prf ..\HM40_projet_fitts_RENAUD_CHAUSSON\HM40_projet_fitts_RENAUD_CHAUSSON.pro ..\HM40_projet_fitts_RENAUD_CHAUSSON\Resources.qrc C:\qt\5.15.2\mingw81_64\lib\Qt5Charts.prl C:\qt\5.15.2\mingw81_64\lib\Qt5Widgets.prl C:\qt\5.15.2\mingw81_64\lib\Qt5Gui.prl C:\qt\5.15.2\mingw81_64\lib\Qt5Core.prl C:\qt\5.15.2\mingw81_64\lib\qtmain.prl   ..\HM40_projet_fitts_RENAUD_CHAUSSON\Resources.qrc C:\qt\5.15.2\mingw81_64\mkspecs\features\data\dummy.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\constant.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\parametreModel.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h  ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\main.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\parametreModel.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.cpp ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.ui ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug\dialogaide.o debug\dialogpara.o debug\main.o debug\mainwindow.o debug\parametreModel.o debug\resultats.o debug\testfitts.o debug\qrc_Resources.o debug\moc_dialogaide.o debug\moc_dialogpara.o debug\moc_mainwindow.o debug\moc_resultats.o debug\moc_testfitts.o
@@ -253,7 +253,7 @@ debug/moc_dialogaide.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogaide.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h -o debug\moc_dialogaide.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.h -o debug\moc_dialogaide.cpp
 
 debug/moc_dialogpara.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QDialog \
@@ -366,7 +366,7 @@ debug/moc_dialogpara.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.h \
 		../HM40_projet_fitts_RENAUD_CHAUSSON/constant.h \
 		debug/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h -o debug\moc_dialogpara.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.h -o debug\moc_dialogpara.cpp
 
 debug/moc_mainwindow.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
@@ -524,7 +524,7 @@ debug/moc_mainwindow.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
 		debug/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_resultats.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMainWindow \
@@ -633,9 +633,89 @@ debug/moc_resultats.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChart \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchart.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartglobal.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QPen \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QFont \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QObject \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLegend \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlegend.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicswidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicslayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QBrush \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QMargins \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartView \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpainter.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qscrollarea.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsscene.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/parametreModel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QPoint \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QList \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QString \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QTranslator \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qtranslator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QSettings \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QInputDialog \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qinputdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLineSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlineseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QXYSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qxyseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QStringList \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSet \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarset.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QCategoryAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qcategoryaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QValueAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
 		debug/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h -o debug\moc_resultats.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.h -o debug\moc_resultats.cpp
 
 debug/moc_testfitts.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
@@ -765,7 +845,7 @@ debug/moc_testfitts.cpp: ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.h \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QList \
 		debug/moc_predefs.h \
 		C:/qt/5.15.2/mingw81_64/bin/moc.exe
-	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h -o debug\moc_testfitts.cpp
+	C:\qt\5.15.2\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/build-HM40_projet_fitts_RENAUD_CHAUSSON-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/qt/5.15.2/mingw81_64/mkspecs/win32-g++ -I"D:/UTBM/cours utbm/semestre 5/HM40/Projet-fitts/HM40Fitts/HM40_projet_fitts_RENAUD_CHAUSSON" -IC:/qt/5.15.2/mingw81_64/include -IC:/qt/5.15.2/mingw81_64/include/QtCharts -IC:/qt/5.15.2/mingw81_64/include/QtWidgets -IC:/qt/5.15.2/mingw81_64/include/QtGui -IC:/qt/5.15.2/mingw81_64/include/QtANGLE -IC:/qt/5.15.2/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\HM40_projet_fitts_RENAUD_CHAUSSON\testfitts.h -o debug\moc_testfitts.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -907,7 +987,23 @@ debug/dialogaide.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogaide.cpp ../HM40_
 		C:/qt/5.15.2/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qvector2d.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
-		ui_dialogaide.h
+		ui_dialogaide.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialogaide.o ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogaide.cpp
 
 debug/dialogpara.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.cpp ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.h \
@@ -1020,6 +1116,34 @@ debug/dialogpara.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/dialogpara.cpp ../HM40_
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QList \
 		../HM40_projet_fitts_RENAUD_CHAUSSON/constant.h \
 		ui_dialogpara.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QDialogButtonBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QDoubleSpinBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qspinbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractspinbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qvalidator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qregularexpression.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QSpacerItem \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QSpinBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\dialogpara.o ..\HM40_projet_fitts_RENAUD_CHAUSSON\dialogpara.cpp
 
@@ -1342,6 +1466,17 @@ debug/mainwindow.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/mainwindow.cpp ../HM40_
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
 		ui_mainwindow.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QAction \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QFrame \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMenu \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QStatusBar \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qstatusbar.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/QPixmap \
 		C:/qt/5.15.2/mingw81_64/include/QtCore/QRectF \
 		../HM40_projet_fitts_RENAUD_CHAUSSON/dialogaide.h
@@ -1502,7 +1637,101 @@ debug/resultats.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/resultats.cpp ../HM40_pr
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qtouchdevice.h \
 		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/qt/5.15.2/mingw81_64/include/QtGui/qicon.h \
-		ui_resultats.h
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChart \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchart.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartglobal.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QtGlobal \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QPen \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpen.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QFont \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QVariant \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QObject \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLegend \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlegend.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsWidget \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicswidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicslayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpainterpath.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/QBrush \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QMargins \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QChartView \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qchartview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGraphicsView \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsview.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qpainter.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextoption.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qscrollarea.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qframe.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgraphicsscene.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgridlayout.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGroupBox \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qgroupbox.h \
+		../HM40_projet_fitts_RENAUD_CHAUSSON/parametreModel.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QPoint \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QList \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QString \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QTranslator \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qtranslator.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QSettings \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/qsettings.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QInputDialog \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qinputdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/qt/5.15.2/mingw81_64/include/QtGui/qtextformat.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QLineSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qlineseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QXYSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qxyseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QAbstractBarSeries \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qabstractbarseries.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCore/QStringList \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QBarSet \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qbarset.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QCategoryAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qcategoryaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/QValueAxis \
+		C:/qt/5.15.2/mingw81_64/include/QtCharts/qvalueaxis.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QLabel \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qlabel.h \
+		ui_resultats.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QAction \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qaction.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qactiongroup.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QGridLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QHBoxLayout \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMenu \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmenu.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QMenuBar \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qmenubar.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QPushButton \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qpushbutton.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/QStatusBar \
+		C:/qt/5.15.2/mingw81_64/include/QtWidgets/qstatusbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\resultats.o ..\HM40_projet_fitts_RENAUD_CHAUSSON\resultats.cpp
 
 debug/testfitts.o: ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.cpp ../HM40_projet_fitts_RENAUD_CHAUSSON/testfitts.h \

@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     // On ajoute nous même le graphique CAR il ne peut pas être ajouter depuis l'éditeur
     graphicView = new testFitts(model);
     graphicView->setStyleSheet("background-color: white;");
-    connect(graphicView, SIGNAL(onFinish(FittsModel*)), this, SLOT(onGraphFinish(FittsModel*)));
+    connect(graphicView, SIGNAL(onFinish(parametreModel*)), this, SLOT(openResults()));
     connect(graphicView, SIGNAL(onTargetChange(int)), this, SLOT(onTargetChange(int)));
     ui->frameLayout->addWidget(graphicView);
 
@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionParam_trage, SIGNAL(triggered()), this, SLOT(paraClicked()));
     connect(ui->pushButtonInfo, SIGNAL(clicked()), this, SLOT(aideClicked()));
     connect(ui->pushButtonParam, SIGNAL(clicked()), this, SLOT(paraClicked()));
+
 
 
 
@@ -96,7 +97,33 @@ void MainWindow::paraClicked() {
 }
 
 
+void MainWindow::openResults() {
+    qDebug() << "Opening results";
+    resultats *f = new resultats(model, this);
+    f->show();
+    this->close();
+}
 
+void MainWindow::openHome(){
+    qDebug() << "Opening home";
+    home = new MainWindow(this);
+    home->show();
+}
+
+// Ceci permet de recevoir des events depuis le widget Results
+void MainWindow::onResultsEvent(int val) {
+    qDebug() << "[MainWindow] onResultsEvent";
+    switch(val) {
+    case RESULTS_RESTART:
+        openHome();
+        break;
+    case RESULTS_EXIT_PRGM:
+        QApplication::quit();
+    default:
+
+        break;
+    }
+}
 
 //void MainWindow::creerCible(){
 //    if (cible != NULL){

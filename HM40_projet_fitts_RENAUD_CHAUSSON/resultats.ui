@@ -54,13 +54,6 @@
           </layout>
          </widget>
         </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_3">
-          <property name="text">
-           <string>Changer d'absices</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </item>
       <item>
@@ -258,14 +251,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="recommencer">
             <property name="text">
              <string>Recommencer</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="QuitterResult">
             <property name="text">
              <string>Quitter</string>
             </property>
