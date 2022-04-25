@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Résultats</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(200, 204, 230);</string>
@@ -89,13 +89,14 @@
      <x>0</x>
      <y>0</y>
      <width>905</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">
     <property name="title">
      <string>Fichier</string>
     </property>
+    <addaction name="actionQuitter"/>
    </widget>
    <widget class="QMenu" name="menuParam_tre">
     <property name="title">
@@ -122,6 +123,11 @@
   <action name="actionParam_trages">
    <property name="text">
     <string>Paramétrages</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
    </property>
   </action>
  </widget>

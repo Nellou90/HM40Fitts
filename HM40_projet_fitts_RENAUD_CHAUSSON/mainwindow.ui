@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Fitts</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(200, 204, 230);</string>
@@ -124,7 +124,7 @@ border-color: rgb(43, 66, 130);</string>
      <x>0</x>
      <y>0</y>
      <width>1049</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">

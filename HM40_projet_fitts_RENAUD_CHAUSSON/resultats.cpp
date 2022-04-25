@@ -1,11 +1,20 @@
 #include "resultats.h"
 #include "ui_resultats.h"
+#include "dialogaide.h"
+#include "ui_dialogaide.h"
+#include "dialogpara.h"
+#include "ui_dialogpara.h"
+#include "parametreModel.h"
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 resultats::resultats(parametreModel *model,QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::resultats)
 {
     ui->setupUi(this);
+    modelRes = new parametreModel;
 
     //container
     // TabWidget
@@ -20,6 +29,9 @@ resultats::resultats(parametreModel *model,QWidget *parent) :
 
     connect(ui->recommencer, SIGNAL(clicked()), this, SLOT(on_recommencer_clicked()));
     connect(ui->QuitterResult, SIGNAL(clicked()), this, SLOT(on_QuitterResult_clicked()));
+    connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClickedRes()));
+    connect(ui->actionQuitter, SIGNAL(triggered()), this, SLOT(on_QuitterResult_clicked()));
+    connect(ui->actionParam_trages, SIGNAL(triggered()), this, SLOT(paraClickedRes()));
 }
 
 resultats::~resultats()
@@ -206,14 +218,27 @@ QWidget *resultats::generateResultLayout(parametreModel *model, QChartView* char
 
 void resultats::on_recommencer_clicked()
 {
-    QMessageBox *f =new QMessageBox;
-    f->setText("Fonction non implémentée !");
-
+    this->close();
+    //QMessageBox *f =new QMessageBox;
+    //f->setText("Fonction non implémentée !");
+    MainWindow *f=new MainWindow(this);
+    f->show();
 }
 
 
 void resultats::on_QuitterResult_clicked()
 {
    this->close();
+}
+
+void resultats::aideClickedRes() {
+    DialogAide *f=new DialogAide(this);
+    f->show();
+}
+
+void resultats::paraClickedRes() {
+    dialogPara *f=new dialogPara(modelRes, this);
+//    connect(f, SIGNAL(onSettingsEvent(int,void*)), this, SLOT(onSettingsEvent(int,void*)));
+    f->open();
 }
 

@@ -139,7 +139,7 @@ public:
 
     void retranslateUi(QDialog *DialogAide)
     {
-        DialogAide->setWindowTitle(QCoreApplication::translate("DialogAide", "Dialog", nullptr));
+        DialogAide->setWindowTitle(QCoreApplication::translate("DialogAide", "Aide", nullptr));
         label->setText(QCoreApplication::translate("DialogAide", "<html><head/><body><h1 align=\"center\" style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700; text-decoration: underline; color:#4049b1;\">Aide</span></h1></body></html>", nullptr));
         label_2->setText(QCoreApplication::translate("DialogAide", "<html><head/><body><h2 align=\"center\" style=\" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:x-large; font-weight:700; text-decoration: underline; color:#2b3176;\">Qu'est ce que la Loi de Fitts ? </span></h2></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("DialogAide", "<html><head/><body><p align=\"center\">Bas\303\251e sur une \303\251quation math\303\251matique, la loi de Fitts est utilis\303\251e afin de mettre en \303\251vidence le temps n\303\251cessaire pour atteindre un objet cible. Quand on se met dans la cadre de l\342\200\231IHM, un objet cible est n\342\200\231importe quel \303\251l\303\251ment interactif, comme un lien hypertexte, un bouton d\342\200\231envoi ou un champ de saisie dans un formulaire sur internet. Dans notre test les cibles seront des ronds <span style=\" font-weight:700; color:#ff5e5e;\">ROUGE</span>.</p></body></html>", nullptr));

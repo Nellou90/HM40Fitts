@@ -140,7 +140,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1049, 21));
+        menubar->setGeometry(QRect(0, 0, 1049, 22));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tre = new QMenu(menubar);
@@ -163,7 +163,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Fitts", nullptr));
         actionQuitter->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
         actionAide->setText(QCoreApplication::translate("MainWindow", "Aide", nullptr));
         actionParam_trage->setText(QCoreApplication::translate("MainWindow", "Param\303\250trages", nullptr));

@@ -31,6 +31,9 @@
 
 #include "constant.h"
 
+#include "aide.h"
+#include "dialogpara.h"
+
 
 QT_CHARTS_USE_NAMESPACE
 
@@ -53,6 +56,7 @@ private:
     QChart *buildGraph_1(parametreModel *fittsModel);
     QChart *buildGraph_2(parametreModel *fittsModel);
     QWidget *generateResultLayout(parametreModel *model, QChartView* chart);
+    parametreModel *modelRes;
 
 signals:
     void onResultsEvent(int);
@@ -60,6 +64,8 @@ signals:
 private slots:
     void on_recommencer_clicked();
     void on_QuitterResult_clicked();
+    void aideClickedRes();
+    void paraClickedRes();
 };
 
 #endif // RESULTATS_H

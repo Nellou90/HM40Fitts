@@ -30,6 +30,7 @@ class Ui_resultats
 public:
     QAction *actionAide;
     QAction *actionParam_trages;
+    QAction *actionQuitter;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout;
@@ -57,6 +58,8 @@ public:
         actionAide->setObjectName(QString::fromUtf8("actionAide"));
         actionParam_trages = new QAction(resultats);
         actionParam_trages->setObjectName(QString::fromUtf8("actionParam_trages"));
+        actionQuitter = new QAction(resultats);
+        actionQuitter->setObjectName(QString::fromUtf8("actionQuitter"));
         centralwidget = new QWidget(resultats);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout_6 = new QVBoxLayout(centralwidget);
@@ -118,7 +121,7 @@ public:
         resultats->setCentralWidget(centralwidget);
         menubar = new QMenuBar(resultats);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 905, 21));
+        menubar->setGeometry(QRect(0, 0, 905, 22));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tre = new QMenu(menubar);
@@ -133,6 +136,7 @@ public:
         menubar->addAction(menuFichier->menuAction());
         menubar->addAction(menuParam_tre->menuAction());
         menubar->addAction(menuAide->menuAction());
+        menuFichier->addAction(actionQuitter);
         menuParam_tre->addAction(actionParam_trages);
         menuAide->addAction(actionAide);
 
@@ -143,9 +147,10 @@ public:
 
     void retranslateUi(QMainWindow *resultats)
     {
-        resultats->setWindowTitle(QCoreApplication::translate("resultats", "MainWindow", nullptr));
+        resultats->setWindowTitle(QCoreApplication::translate("resultats", "R\303\251sultats", nullptr));
         actionAide->setText(QCoreApplication::translate("resultats", "Aide", nullptr));
         actionParam_trages->setText(QCoreApplication::translate("resultats", "Param\303\251trages", nullptr));
+        actionQuitter->setText(QCoreApplication::translate("resultats", "Quitter", nullptr));
         label->setText(QCoreApplication::translate("resultats", "<html><head/><body><h1 align=\"center\" style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700; text-decoration: underline; color:#1a2465;\">R\303\251sultats</span></h1></body></html>", nullptr));
 #if QT_CONFIG(whatsthis)
         recommencer->setWhatsThis(QCoreApplication::translate("resultats", "<html><head/><body><p><span style=\" font-weight:700; color:#ff6254;\">Fonction non impl\303\251ment\303\251 </span></p></body></html>", nullptr));

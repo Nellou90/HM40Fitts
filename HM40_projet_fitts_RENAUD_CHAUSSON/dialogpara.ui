@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Paramétrages</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 231, 231);</string>
