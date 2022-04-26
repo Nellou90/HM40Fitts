@@ -30,6 +30,7 @@ void testFitts::mousePressEvent(QMouseEvent *event) {
     cibleClicked(event->x(), event->y());
 }
 
+//Setup de l'espace dédier au jeu dans l'ui principale
 void testFitts::setup() {
     this->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOff);
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -40,6 +41,7 @@ void testFitts::setup() {
     scene->setSceneRect(0,0,this->width(),300);
 }
 
+//Initiation du jeu et de la parti graphique du test
 void testFitts::initGame() {
 
     scene()->clear();
@@ -62,6 +64,7 @@ void testFitts::initGame() {
 }
 
 
+//Vérifie si une cible a été cliqué
 void testFitts::cibleClicked(int x, int y) {
     if(this->fittsmodel->cercleCenter.isEmpty()) {
         qDebug() << "premier click";
@@ -89,6 +92,7 @@ void testFitts::cibleClicked(int x, int y) {
     }
 }
 
+//Mets en place la cible suivante a cliqué
 void testFitts::nextCible() {
     if(!this->fittsmodel->cercleCenter.isEmpty())
         this->fittsmodel->cibleLeft--;
@@ -129,10 +133,9 @@ void testFitts::nextCible() {
     scene()->addEllipse(posX - (size / 2), posY - (size / 2), size, size, QPen(QColor("#ff6254")),QBrush(QColor("#ff6254")));
 }
 
+//finis le jeu et envoie sur la page des paramètre
 void testFitts::finish() {
 
     qDebug() << "Program finish";
     emit onFinish(fittsmodel);
-    //this->fittsView->graphicView->setEnabled(false);
-    //this->fittsView->resultBtn->setEnabled(true);
 }

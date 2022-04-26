@@ -16,17 +16,17 @@ resultats::resultats(parametreModel *model,QWidget *parent) :
     ui->setupUi(this);
     modelRes = new parametreModel;
 
-    //container
-    // TabWidget
+    // TabWidget qui sera le lit des graphiques
     QTabWidget *tab = new QTabWidget();
 
-    // createQChartView(buildGraph_1(model))
-
+    // ajouts des graphes dans un layout dédié
     tab->addTab(generateResultLayout(model,createQChartView(buildGraph_1(model))), "Graphique 1");
     tab->addTab(createQChartView(buildGraph_2(model)), "Graphique 2");
 
+    //Ajout du widget graphe à la fenetre résultat
     ui->LayoutGraphe->addWidget(tab);
 
+    //Connection des différents boutons de la fenetre resultats
     connect(ui->recommencer, SIGNAL(clicked()), this, SLOT(on_recommencer_clicked()));
     connect(ui->QuitterResult, SIGNAL(clicked()), this, SLOT(on_QuitterResult_clicked()));
     connect(ui->actionAide, SIGNAL(triggered()), this, SLOT(aideClickedRes()));
@@ -34,22 +34,24 @@ resultats::resultats(parametreModel *model,QWidget *parent) :
     connect(ui->actionParam_trages, SIGNAL(triggered()), this, SLOT(paraClickedRes()));
 }
 
+//destroyeur fenetre résultat
 resultats::~resultats()
 {
     delete ui;
 }
 
-
+//Création d'une chart view pour la mise en page des graphiques
 QChartView *resultats::createQChartView(QChart *chart) {
     QChartView *plot = new QChartView;
 
-    // Using utils function, building the chart
+    // Utilisation de fonctions utiles pour la création de la chart view
     plot->setChart(chart);
     plot->setRenderHint(QPainter::Antialiasing);
     plot->setStyleSheet("background: white");
     return plot;
 }
 
+//création du deuxième graphique
 QChart *resultats::buildGraph_2(parametreModel *fittsModel) {
     QChart *chart = new QChart;
 
@@ -91,6 +93,7 @@ QChart *resultats::buildGraph_2(parametreModel *fittsModel) {
 }
 
 
+//Création du premier graphique
 QChart *resultats::buildGraph_1(parametreModel *fittsModel) {
 
     QChart *chart = new QChart;
@@ -174,6 +177,7 @@ QChart *resultats::buildGraph_1(parametreModel *fittsModel) {
     return chart;
 }
 
+//Génération du Layout acceuillant les deux graphiques
 QWidget *resultats::generateResultLayout(parametreModel *model, QChartView* chart) {
     QWidget *central = new QWidget;
     central->setStyleSheet("background: white");
@@ -215,27 +219,28 @@ QWidget *resultats::generateResultLayout(parametreModel *model, QChartView* char
 
 
 
-
+//Slot qui permet de recommencer le test depuis la fenetre resultats. Cependant, il y a un problème : deux mainWindows se créent et nous n'avons pas réussir à régler ce problème.
 void resultats::on_recommencer_clicked()
 {
     this->close();
-    //QMessageBox *f =new QMessageBox;
-    //f->setText("Fonction non implémentée !");
     MainWindow *f=new MainWindow(this);
     f->show();
+
 }
 
-
+//Slot qui permet de quitter l'application
 void resultats::on_QuitterResult_clicked()
 {
    this->close();
 }
 
+//Slot qui permet d'ouvrir le pop-up aide
 void resultats::aideClickedRes() {
     DialogAide *f=new DialogAide(this);
     f->show();
 }
 
+//Slot qui permet d'ouvrir le pop-up parametre
 void resultats::paraClickedRes() {
     dialogPara *f=new dialogPara(modelRes, this);
 //    connect(f, SIGNAL(onSettingsEvent(int,void*)), this, SLOT(onSettingsEvent(int,void*)));

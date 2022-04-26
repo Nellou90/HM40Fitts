@@ -22,7 +22,7 @@ dialogPara::~dialogPara()
 
 
 
-
+//Donne les valeurs initiales aux paramètres du test
 void dialogPara::setupData() {
     ui->edit_a->setValue(temp->a);
     ui->edit_b->setValue(temp->b);
@@ -32,13 +32,7 @@ void dialogPara::setupData() {
     ui->TMax->setValue(temp->maxSize);
 }
 
-void dialogPara::on_restore_default_clicked()
-{
-
-}
-
-
-
+//Permet de sauvegarder les valeur donné par l'utilisateur aux paramètres
 void dialogPara::accept()
 {
     //TODO: put some constraint ? => limit a to some values etc..
@@ -50,7 +44,5 @@ void dialogPara::accept()
     temp->cibleLeft = ui->nbCibleSpinBox->value();
     qDebug() << ui->nbCibleSpinBox->value();
     QDialog::accept();
-
-   // emit onSettingsEvent(SETTINGS_CLOSE, fittsmodel);
 }
 

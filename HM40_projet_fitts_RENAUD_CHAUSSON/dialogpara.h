@@ -21,8 +21,6 @@ signals:
     //void onSettingsEvent(int, void *);
 
 private slots:
-
-    void on_restore_default_clicked();
     void accept();
 
 private:

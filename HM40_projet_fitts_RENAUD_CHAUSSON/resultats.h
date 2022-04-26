@@ -35,6 +35,8 @@
 #include "dialogpara.h"
 
 
+
+
 QT_CHARTS_USE_NAMESPACE
 
 namespace Ui {
@@ -57,6 +59,7 @@ private:
     QChart *buildGraph_2(parametreModel *fittsModel);
     QWidget *generateResultLayout(parametreModel *model, QChartView* chart);
     parametreModel *modelRes;
+
 
 signals:
     void onResultsEvent(int);
